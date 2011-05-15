@@ -49,7 +49,7 @@ class L10n
                 while (FALSE !== ($file = readdir($handle)))
                 {
                     $path = $config['l10n']['locales'] . "/$file";
-                    if ($file != "." && $file != ".." && is_dir($path))
+                    if ($file != '.' && $file != '..' && is_dir($path))
                     {
                         self::$languages[] = $file;
                     }
@@ -73,18 +73,18 @@ class L10n
     {
         $lang = self::iso_to_posix($language);
 
-        setcookie('lang', $lang, M2DateTime::delayed_timestamp("+1year"), '/');
+        setcookie('lang', $lang, M2DateTime::delayed_timestamp('+1year'), '/');
         return $lang;
     }
 
-   /**
-    * Convert a language (if supported) from ISO 639-1 to POSIX locale format.
-    *
-    * @param String $language The language to convert on ISO 639-1 format
-    *
-    * @return String $locale The POSIX locale that has been deemed most
-    *                          appropriate or the default if not found
-    */
+    /**
+     * Convert a language (if supported) from ISO 639-1 to POSIX locale format.
+     *
+     * @param String $language The language to convert on ISO 639-1 format
+     *
+     * @return String $locale The POSIX locale that has been deemed most
+     *                          appropriate or the default if not found
+     */
     public static function iso_to_posix($language)
     {
         global $config;
