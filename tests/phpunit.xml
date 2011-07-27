@@ -12,6 +12,11 @@
             <file>tests/system/libraries/l10n/class.l10n.test.php</file>
         </testsuite>
     </testsuites>
+    <filter>
+        <blacklist>
+            <directory>../tests/</directory>
+        </blacklist>
+    </filter>
     <logging>
         <log    type="coverage-html"
                 target="../build/coverage"
