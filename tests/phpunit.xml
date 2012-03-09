@@ -10,6 +10,7 @@
     <testsuites>
         <testsuite name="Lunr Testsuite">
             <file>tests/system/libraries/l10n/class.l10n.test.php</file>
+            <file>tests/system/libraries/l10n/class.l10nprovider.test.php</file>
         </testsuite>
     </testsuites>
     <filter>
