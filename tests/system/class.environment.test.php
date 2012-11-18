@@ -14,6 +14,7 @@
  */
 
 namespace Lunr;
+
 use PHPUnit_Framework_TestCase;
 use ReflectionClass;
 
@@ -42,7 +43,7 @@ class EnvironmentTest extends PHPUnit_Framework_TestCase
      */
     public function testL10nFiles()
     {
-        $file = dirname(__FILE__) . "/../statics/l10n/de_DE/LC_MESSAGES/Lunr.mo";
+        $file = dirname(__FILE__) . '/../statics/l10n/de_DE/LC_MESSAGES/Lunr.mo';
         $this->assertTrue(file_exists($file));
     }
 
