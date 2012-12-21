@@ -13,7 +13,9 @@
  * @license    http://lunr.nl/LICENSE MIT License
  */
 
-namespace Lunr\Libraries\L10n;
+namespace Lunr\L10n\Tests;
+
+use Lunr\L10n\GettextL10nProvider;
 
 use PHPUnit_Framework_TestCase;
 use ReflectionClass;
@@ -26,7 +28,7 @@ use ReflectionClass;
  * @package    L10n
  * @subpackage Tests
  * @author     Heinz Wiesinger <heinz@m2mobi.com>
- * @covers     Lunr\Libraries\L10n\GettextL10nProvider
+ * @covers     Lunr\L10n\GettextL10nProvider
  */
 abstract class GettextL10nProviderTest extends PHPUnit_Framework_TestCase
 {
@@ -60,11 +62,11 @@ abstract class GettextL10nProviderTest extends PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
-        $sub_configuration = $this->getMock('Lunr\Libraries\Core\Configuration');
+        $sub_configuration = $this->getMock('Lunr\Core\Configuration');
 
         $map = array(
             array('domain', 'Lunr'),
-            array('locales', dirname(__FILE__) . '/../../../statics/l10n'),
+            array('locales', dirname(__FILE__) . '/../../../../tests/statics/l10n'),
             array('default_language', 'nl_NL'),
         );
 
@@ -72,7 +74,7 @@ abstract class GettextL10nProviderTest extends PHPUnit_Framework_TestCase
                           ->method('offsetGet')
                           ->will($this->returnValueMap($map));
 
-        $this->configuration = $this->getMock('Lunr\Libraries\Core\Configuration');
+        $this->configuration = $this->getMock('Lunr\Core\Configuration');
 
         $map = array(
             array('l10n', $sub_configuration),
@@ -82,13 +84,13 @@ abstract class GettextL10nProviderTest extends PHPUnit_Framework_TestCase
                       ->method('offsetGet')
                       ->will($this->returnValueMap($map));
 
-        $logger = $this->getMockBuilder('Lunr\Libraries\Core\Logger')
+        $logger = $this->getMockBuilder('Lunr\Core\Logger')
                        ->disableOriginalConstructor()
                        ->getMock();
 
         $this->provider = new GettextL10nProvider(self::LANGUAGE, $this->configuration, $logger);
 
-        $this->provider_reflection = new ReflectionClass('Lunr\Libraries\L10n\GettextL10nProvider');
+        $this->provider_reflection = new ReflectionClass('Lunr\L10n\GettextL10nProvider');
     }
 
     /**

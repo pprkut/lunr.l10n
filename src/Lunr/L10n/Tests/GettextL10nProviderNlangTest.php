@@ -13,7 +13,9 @@
  * @license    http://lunr.nl/LICENSE MIT License
  */
 
-namespace Lunr\Libraries\L10n;
+namespace Lunr\L10n\Tests;
+
+use Lunr\L10n\GettextL10nProvider;
 
 /**
  * This class contains the tests for the lang function.
@@ -22,7 +24,7 @@ namespace Lunr\Libraries\L10n;
  * @package    L10n
  * @subpackage Tests
  * @author     Heinz Wiesinger <heinz@m2mobi.com>
- * @covers     Lunr\Libraries\L10n\GettextL10nProvider
+ * @covers     Lunr\L10n\GettextL10nProvider
  */
 class GettextL10nProviderNlangTest extends GettextL10nProviderTest
 {
@@ -33,8 +35,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      * @runInSeparateProcess
      *
      * @depends Lunr\EnvironmentTest::testL10nFiles
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangSingularWithoutContext()
     {
@@ -47,8 +49,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      * @runInSeparateProcess
      *
      * @depends Lunr\EnvironmentTest::testL10nFiles
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangPluralWithoutContext()
     {
@@ -60,8 +62,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangSingularUntranslatedWithoutContextReturnsSingular()
     {
@@ -73,8 +75,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangPluralUntranslatedWithoutContextReturnsPlural()
     {
@@ -87,8 +89,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      * @runInSeparateProcess
      *
      * @depends Lunr\EnvironmentTest::testL10nFiles
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangSingularWithContext()
     {
@@ -101,8 +103,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      * @runInSeparateProcess
      *
      * @depends Lunr\EnvironmentTest::testL10nFiles
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangPluralWithContext()
     {
@@ -114,8 +116,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangUntranslatedSingularWithContextReturnsSingular()
     {
@@ -127,8 +129,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangUntranslatedPluralWithContextReturnsPlural()
     {
@@ -140,8 +142,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangSingularWithSuperfluousContextReturnsSingular()
     {
@@ -153,8 +155,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangPluralWithSuperfluousContextReturnsPlural()
     {
@@ -166,8 +168,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangSingularWithContextMissingReturnsSingular()
     {
@@ -179,8 +181,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangPluralWithContextMissingReturnsPlural()
     {
@@ -193,8 +195,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      * @runInSeparateProcess
      *
      * @depends Lunr\EnvironmentTest::testL10nFiles
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangSingularWithoutContextAndFakePluralTranslatesSingular()
     {
@@ -207,8 +209,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      * @runInSeparateProcess
      *
      * @depends Lunr\EnvironmentTest::testL10nFiles
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangPluralWithoutContextAndFakePluralTranslatesSingular()
     {
@@ -220,8 +222,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangPluralWithContextMissingAndFakePluralReturnsPlural()
     {
@@ -234,8 +236,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      * @runInSeparateProcess
      *
      * @depends Lunr\EnvironmentTest::testL10nFiles
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangSingularWithContextAndFakePluralTranslatesSingular()
     {
@@ -248,8 +250,8 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      * @runInSeparateProcess
      *
      * @depends Lunr\EnvironmentTest::testL10nFiles
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangPluralWithContextAndFakePluralTranslatesSingular()
     {
@@ -261,7 +263,7 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangWithoutContextAndTooLongIdentifierReturnsIdentifier()
     {
@@ -279,7 +281,7 @@ class GettextL10nProviderNlangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::nlang
+     * @covers  Lunr\L10n\GettextL10nProvider::nlang
      */
     public function testNlangWithContextAndTooLongIdentifierReturnsIdentifier()
     {

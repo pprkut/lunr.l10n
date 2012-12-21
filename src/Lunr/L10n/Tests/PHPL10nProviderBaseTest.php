@@ -13,7 +13,9 @@
  * @license    http://lunr.nl/LICENSE MIT License
  */
 
-namespace Lunr\Libraries\L10n;
+namespace Lunr\L10n\Tests;
+
+use Lunr\L10n\PHPL10nProvider;
 
 /**
  * This class contains the tests for the contructor and init function,
@@ -23,7 +25,7 @@ namespace Lunr\Libraries\L10n;
  * @package    L10n
  * @subpackage Tests
  * @author     Heinz Wiesinger <heinz@m2mobi.com>
- * @covers     Lunr\Libraries\L10n\PHPL10nProvider
+ * @covers     Lunr\L10n\PHPL10nProvider
  */
 class PHPL10nProviderBaseTest extends PHPL10nProviderTest
 {
@@ -55,7 +57,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
      * @runInSeparateProcess
      *
      * @depends testLangArrayEmptyForDefaultLanguage
-     * @covers  Lunr\Libraries\L10n\PHPL10nProvider::init
+     * @covers  Lunr\L10n\PHPL10nProvider::init
      */
     public function testInit()
     {
@@ -75,7 +77,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
     /**
      * Test that the lang() function returns the identifier when the set language is the default language.
      *
-     * @covers Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @covers Lunr\L10n\PHPL10nProvider::lang
      */
     public function testLangWithoutContextReturnsIdentifierWhenLanguageIsDefault()
     {
@@ -85,7 +87,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
     /**
      * Test that the lang() function returns the identifier when the set language is the default language.
      *
-     * @covers Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @covers Lunr\L10n\PHPL10nProvider::lang
      */
     public function testLangWithContextReturnsIdentifierWhenLanguageIsDefault()
     {
@@ -95,7 +97,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
     /**
      * Test that the nlang() function returns singular when the set language is the default language.
      *
-     * @covers Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @covers Lunr\L10n\PHPL10nProvider::lang
      */
     public function testNlangSingularWithoutContextReturnsSingularWhenLanguageIsDefault()
     {
@@ -105,7 +107,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
     /**
      * Test that the nlang() function returns plural when the set language is the default language.
      *
-     * @covers Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @covers Lunr\L10n\PHPL10nProvider::lang
      */
     public function testNlangPluralWithoutContextReturnsPluralWhenLanguageIsDefault()
     {
@@ -115,7 +117,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
     /**
      * Test that the nlang() function returns singular when the set language is the default language.
      *
-     * @covers Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @covers Lunr\L10n\PHPL10nProvider::lang
      */
     public function testNlangSingularWithContextReturnsSingularWhenLanguageIsDefault()
     {
@@ -125,7 +127,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
     /**
      * Test that the nlang() function returns plural when the set language is the default language.
      *
-     * @covers Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @covers Lunr\L10n\PHPL10nProvider::lang
      */
     public function testNlangPluralWithContextReturnsPluralWhenLanguageIsDefault()
     {

@@ -13,7 +13,9 @@
  * @license    http://lunr.nl/LICENSE MIT License
  */
 
-namespace Lunr\Libraries\L10n;
+namespace Lunr\L10n\Tests;
+
+use Lunr\L10n\GettextL10nProvider;
 
 /**
  * This class contains the tests for the contructor and init function.
@@ -22,7 +24,7 @@ namespace Lunr\Libraries\L10n;
  * @package    L10n
  * @subpackage Tests
  * @author     Heinz Wiesinger <heinz@m2mobi.com>
- * @covers     Lunr\Libraries\L10n\GettextL10nProvider
+ * @covers     Lunr\L10n\GettextL10nProvider
  */
 class GettextL10nProviderBaseTest extends GettextL10nProviderTest
 {
@@ -32,7 +34,7 @@ class GettextL10nProviderBaseTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @covers Lunr\Libraries\L10n\GettextL10nProvider::init
+     * @covers Lunr\L10n\GettextL10nProvider::init
      */
     public function testInit()
     {

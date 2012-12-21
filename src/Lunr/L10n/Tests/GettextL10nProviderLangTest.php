@@ -13,7 +13,9 @@
  * @license    http://lunr.nl/LICENSE MIT License
  */
 
-namespace Lunr\Libraries\L10n;
+namespace Lunr\L10n\Tests;
+
+use Lunr\L10n\GettextL10nProvider;
 
 /**
  * This class contains the tests for the lang function.
@@ -22,7 +24,7 @@ namespace Lunr\Libraries\L10n;
  * @package    L10n
  * @subpackage Tests
  * @author     Heinz Wiesinger <heinz@m2mobi.com>
- * @covers     Lunr\Libraries\L10n\GettextL10nProvider
+ * @covers     Lunr\L10n\GettextL10nProvider
  */
 class GettextL10nProviderLangTest extends GettextL10nProviderTest
 {
@@ -33,8 +35,8 @@ class GettextL10nProviderLangTest extends GettextL10nProviderTest
      * @runInSeparateProcess
      *
      * @depends Lunr\EnvironmentTest::testL10nFiles
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::lang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::lang
      */
     public function testLangWithoutContext()
     {
@@ -46,8 +48,8 @@ class GettextL10nProviderLangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::lang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::lang
      */
     public function testLangUntranslatedWithoutContextReturnsIdentifier()
     {
@@ -60,8 +62,8 @@ class GettextL10nProviderLangTest extends GettextL10nProviderTest
      * @runInSeparateProcess
      *
      * @depends Lunr\EnvironmentTest::testL10nFiles
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::lang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::lang
      */
     public function testLangWithContext()
     {
@@ -73,8 +75,8 @@ class GettextL10nProviderLangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::lang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::lang
      */
     public function testLangUntranslatedWithContextReturnsIdentifier()
     {
@@ -86,8 +88,8 @@ class GettextL10nProviderLangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::lang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::lang
      */
     public function testLangWithSuperfluousContextReturnsIdentifier()
     {
@@ -99,8 +101,8 @@ class GettextL10nProviderLangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::lang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::lang
      */
     public function testLangWithContextMissingReturnsIdentifier()
     {
@@ -113,8 +115,8 @@ class GettextL10nProviderLangTest extends GettextL10nProviderTest
      * @runInSeparateProcess
      *
      * @depends Lunr\EnvironmentTest::testL10nFiles
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::lang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::lang
      */
     public function testLangAccessingPluralWithSingularTranslatesSingular()
     {
@@ -126,8 +128,8 @@ class GettextL10nProviderLangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::lang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::lang
      */
     public function testLangAccessingPluralWithPluralReturnsIdentifier()
     {
@@ -140,8 +142,8 @@ class GettextL10nProviderLangTest extends GettextL10nProviderTest
      * @runInSeparateProcess
      *
      * @depends Lunr\EnvironmentTest::testL10nFiles
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::lang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::lang
      */
     public function testLangAccessingPluralWithSingularAndContextTranslatesSingular()
     {
@@ -153,8 +155,8 @@ class GettextL10nProviderLangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @depends Lunr\Libraries\L10n\GettextL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::lang
+     * @depends Lunr\L10n\Tests\GettextL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\GettextL10nProvider::lang
      */
     public function testLangAccessingPluralWithPluralAndContextReturnsIdentifier()
     {
@@ -166,7 +168,7 @@ class GettextL10nProviderLangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::lang
+     * @covers  Lunr\L10n\GettextL10nProvider::lang
      */
     public function testLangWithoutContextAndTooLongIdentifierReturnsIdentifier()
     {
@@ -184,7 +186,7 @@ class GettextL10nProviderLangTest extends GettextL10nProviderTest
      *
      * @runInSeparateProcess
      *
-     * @covers  Lunr\Libraries\L10n\GettextL10nProvider::lang
+     * @covers  Lunr\L10n\GettextL10nProvider::lang
      */
     public function testLangWithContextAndTooLongIdentifierReturnsIdentifier()
     {

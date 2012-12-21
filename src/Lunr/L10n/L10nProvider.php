@@ -16,7 +16,7 @@
  * @license    http://lunr.nl/LICENSE MIT License
  */
 
-namespace Lunr\Libraries\L10n;
+namespace Lunr\L10n;
 
 /**
  * Abstract Localization Provider class

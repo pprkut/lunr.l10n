@@ -9,20 +9,23 @@
             colors="true">
     <testsuites>
         <testsuite name="Lunr Testsuite">
-            <file>tests/system/class.environment.test.php</file>
-            <file>tests/system/libraries/l10n/class.l10n.test.php</file>
-            <file>tests/system/libraries/l10n/class.l10nprovider.test.php</file>
-            <file>tests/system/libraries/l10n/class.gettextl10nprovider.base.test.php</file>
-            <file>tests/system/libraries/l10n/class.gettextl10nprovider.lang.test.php</file>
-            <file>tests/system/libraries/l10n/class.gettextl10nprovider.nlang.test.php</file>
-            <file>tests/system/libraries/l10n/class.phpl10nprovider.base.test.php</file>
-            <file>tests/system/libraries/l10n/class.phpl10nprovider.lang.test.php</file>
-            <file>tests/system/libraries/l10n/class.phpl10nprovider.nlang.test.php</file>
+            <file>tests/system/EnvironmentTest.php</file>
+            <file>src/Lunr/L10n/Tests/L10nTest.php</file>
+            <file>src/Lunr/L10n/Tests/L10nProviderTest.php</file>
+            <file>src/Lunr/L10n/Tests/GettextL10nProviderBaseTest.php</file>
+            <file>src/Lunr/L10n/Tests/GettextL10nProviderLangTest.php</file>
+            <file>src/Lunr/L10n/Tests/GettextL10nProviderNlangTest.php</file>
+            <file>src/Lunr/L10n/Tests/PHPL10nProviderBaseTest.php</file>
+            <file>src/Lunr/L10n/Tests/PHPL10nProviderLangTest.php</file>
+            <file>src/Lunr/L10n/Tests/PHPL10nProviderNlangTest.php</file>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
-            <directory>../system/libraries/</directory>
+            <directory>../src/</directory>
+            <exclude>
+                <directory>../src/Lunr/L10n/Tests/</directory>
+            </exclude>
         </whitelist>
     </filter>
     <logging>

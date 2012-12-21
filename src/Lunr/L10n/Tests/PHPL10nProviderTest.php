@@ -13,8 +13,9 @@
  * @license    http://lunr.nl/LICENSE MIT License
  */
 
-namespace Lunr\Libraries\L10n;
+namespace Lunr\L10n\Tests;
 
+use Lunr\L10n\PHPL10nProvider;
 use PHPUnit_Framework_TestCase;
 use ReflectionClass;
 
@@ -26,7 +27,7 @@ use ReflectionClass;
  * @package    L10n
  * @subpackage Tests
  * @author     Heinz Wiesinger <heinz@m2mobi.com>
- * @covers     Lunr\Libraries\L10n\PHPL10nProvider
+ * @covers     Lunr\L10n\PHPL10nProvider
  */
 abstract class PHPL10nProviderTest extends PHPUnit_Framework_TestCase
 {
@@ -74,11 +75,11 @@ abstract class PHPL10nProviderTest extends PHPUnit_Framework_TestCase
      */
     public function setUpCommon()
     {
-        $sub_configuration = $this->getMock('Lunr\Libraries\Core\Configuration');
+        $sub_configuration = $this->getMock('Lunr\Core\Configuration');
 
         $map = array(
             array('domain', 'Lunr'),
-            array('locales', dirname(__FILE__) . '/../../../statics/l10n'),
+            array('locales', dirname(__FILE__) . '/../../../../tests/statics/l10n'),
             array('default_language', self::DEFAULT_LANGUAGE),
         );
 
@@ -86,7 +87,7 @@ abstract class PHPL10nProviderTest extends PHPUnit_Framework_TestCase
                           ->method('offsetGet')
                           ->will($this->returnValueMap($map));
 
-        $this->configuration = $this->getMock('Lunr\Libraries\Core\Configuration');
+        $this->configuration = $this->getMock('Lunr\Core\Configuration');
 
         $map = array(
             array('l10n', $sub_configuration),
@@ -96,11 +97,11 @@ abstract class PHPL10nProviderTest extends PHPUnit_Framework_TestCase
                       ->method('offsetGet')
                       ->will($this->returnValueMap($map));
 
-        $this->logger = $this->getMockBuilder('Lunr\Libraries\Core\Logger')
+        $this->logger = $this->getMockBuilder('Lunr\Core\Logger')
                        ->disableOriginalConstructor()
                        ->getMock();
 
-        $this->provider_reflection = new ReflectionClass('Lunr\Libraries\L10n\PHPL10nProvider');
+        $this->provider_reflection = new ReflectionClass('Lunr\L10n\PHPL10nProvider');
     }
 
     /**

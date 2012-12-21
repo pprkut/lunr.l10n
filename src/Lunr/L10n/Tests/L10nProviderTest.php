@@ -13,8 +13,9 @@
  * @license    http://lunr.nl/LICENSE MIT License
  */
 
-namespace Lunr\Libraries\L10n;
+namespace Lunr\L10n\Tests;
 
+use Lunr\L10n\L10nProvider;
 use PHPUnit_Framework_TestCase;
 use ReflectionClass;
 
@@ -25,7 +26,7 @@ use ReflectionClass;
  * @package    L10n
  * @subpackage Tests
  * @author     Heinz Wiesinger <heinz@m2mobi.com>
- * @covers     Lunr\Libraries\L10n\L10nProvider
+ * @covers     Lunr\L10n\L10nProvider
  */
 class L10nProviderTest extends PHPUnit_Framework_TestCase
 {
@@ -47,11 +48,11 @@ class L10nProviderTest extends PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
-        $this->provider = $this->getMockBuilder('Lunr\Libraries\L10n\L10nProvider')
+        $this->provider = $this->getMockBuilder('Lunr\L10n\L10nProvider')
                                ->setConstructorArgs(array(self::LANGUAGE))
                                ->getMockForAbstractClass();
 
-        $this->provider_reflection = new ReflectionClass('Lunr\Libraries\L10n\L10nProvider');
+        $this->provider_reflection = new ReflectionClass('Lunr\L10n\L10nProvider');
     }
 
     /**
@@ -77,7 +78,7 @@ class L10nProviderTest extends PHPUnit_Framework_TestCase
     /**
      * Test that get_language() returns the set language.
      *
-     * @covers Lunr\Libraries\L10n\L10nProvider::get_language
+     * @covers Lunr\L10n\L10nProvider::get_language
      */
     public function testGetLanguageReturnsLanguage()
     {

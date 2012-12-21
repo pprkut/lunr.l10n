@@ -15,9 +15,9 @@
  * @license    http://lunr.nl/LICENSE MIT License
  */
 
-namespace Lunr\Libraries\L10n;
+namespace Lunr\L10n;
 
-use Lunr\Libraries\Core\DateTime;
+use Lunr\Core\DateTime;
 use UnexpectedValueException;
 use DirectoryIterator;
 

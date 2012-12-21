@@ -13,10 +13,11 @@
  * @license    http://lunr.nl/LICENSE MIT License
  */
 
-namespace Lunr\Libraries\L10n;
+namespace Lunr\L10n\Tests;
 
-use Lunr\Libraries\Core\DateTime;
-use Lunr\Libraries\Core\Configuration;
+use Lunr\L10n\L10n;
+use Lunr\Core\DateTime;
+use Lunr\Core\Configuration;
 use PHPUnit_Framework_TestCase;
 use ReflectionClass;
 
@@ -27,7 +28,7 @@ use ReflectionClass;
  * @package    L10n
  * @subpackage Tests
  * @author     Heinz Wiesinger <heinz@m2mobi.com>
- * @covers     Lunr\Libraries\L10n\L10n
+ * @covers     Lunr\L10n\L10n
  */
 class L10nTest extends PHPUnit_Framework_TestCase
 {
@@ -63,16 +64,16 @@ class L10nTest extends PHPUnit_Framework_TestCase
         $config                             = new Configuration(array());
         $config['l10n']                     = array();
         $config['l10n']['default_language'] = self::DEFAULT_LANG;
-        $config['l10n']['locales']          = dirname(__FILE__) . '/../../../statics/l10n';
+        $config['l10n']['locales']          = dirname(__FILE__) . '/../../../../tests/statics/l10n';
 
-        $datetime = $this->getMock('Lunr\Libraries\Core\DateTime');
+        $datetime = $this->getMock('Lunr\Core\DateTime');
         $datetime->expects($this->any())
                  ->method('get_delayed_timestamp')
                  ->will($this->returnValue(strtotime('+1 year')));
 
         $this->l10n = new L10n($datetime, $config);
 
-        $this->l10n_reflection = new ReflectionClass('Lunr\Libraries\L10n\L10n');
+        $this->l10n_reflection = new ReflectionClass('Lunr\L10n\L10n');
 
         $this->languages = array('de_DE', 'en_GB', 'nl_NL');
     }
@@ -101,7 +102,7 @@ class L10nTest extends PHPUnit_Framework_TestCase
      * Test initial call to get_supported_languages().
      *
      * @depends testLanguagesEmpty
-     * @covers  Lunr\Libraries\L10n\L10n::get_supported_languages
+     * @covers  Lunr\L10n\L10n::get_supported_languages
      */
     public function testInitialGetSupportedLanguages()
     {
@@ -127,7 +128,7 @@ class L10nTest extends PHPUnit_Framework_TestCase
      * Test get_supported_languages() when it was already executed before.
      *
      * @depends testLanguagesPopulated
-     * @covers  Lunr\Libraries\L10n\L10n::get_supported_languages
+     * @covers  Lunr\L10n\L10n::get_supported_languages
      */
     public function testCachedGetSupportedLanguages()
     {
@@ -144,7 +145,7 @@ class L10nTest extends PHPUnit_Framework_TestCase
      *
      * @depends      testCachedGetSupportedLanguages
      * @dataProvider supportedLanguagesProvider
-     * @covers       Lunr\Libraries\L10n\L10n::iso_to_posix
+     * @covers       Lunr\L10n\L10n::iso_to_posix
      */
     public function testIsoToPosixForSupportedLanguages($iso, $posix)
     {
@@ -158,7 +159,7 @@ class L10nTest extends PHPUnit_Framework_TestCase
      *
      * @depends      testCachedGetSupportedLanguages
      * @dataProvider unsupportedLanguagesProvider
-     * @covers       Lunr\Libraries\L10n\L10n::iso_to_posix
+     * @covers       Lunr\L10n\L10n::iso_to_posix
      */
     public function testIsoToPosixForUnsupportedLanguages($iso)
     {
@@ -183,7 +184,7 @@ class L10nTest extends PHPUnit_Framework_TestCase
      *
      * @depends      testIsoToPosixForSupportedLanguages
      * @dataProvider supportedLanguagesProvider
-     * @covers       Lunr\Libraries\L10n\L10n::set_language
+     * @covers       Lunr\L10n\L10n::set_language
      */
     public function testSetLanguageForSupportedLanguages($language, $locale)
     {
@@ -199,7 +200,7 @@ class L10nTest extends PHPUnit_Framework_TestCase
      *
      * @depends      testIsoToPosixForUnsupportedLanguages
      * @dataProvider unsupportedLanguagesProvider
-     * @covers       Lunr\Libraries\L10n\L10n::set_language
+     * @covers       Lunr\L10n\L10n::set_language
      */
     public function testSetLanguageForUnsupportedLanguages($language)
     {
@@ -217,7 +218,7 @@ class L10nTest extends PHPUnit_Framework_TestCase
      * @depends      testCookieNotSet
      * @depends      testIsoToPosixForSupportedLanguages
      * @dataProvider supportedLanguagesProvider
-     * @covers       Lunr\Libraries\L10n\L10n::set_language
+     * @covers       Lunr\L10n\L10n::set_language
      */
     public function testSetLanguageSetsCookie($language, $locale)
     {

@@ -13,7 +13,9 @@
  * @license    http://lunr.nl/LICENSE MIT License
  */
 
-namespace Lunr\Libraries\L10n;
+namespace Lunr\L10n\Tests;
+
+use Lunr\L10n\PHPL10nProvider;
 
 /**
  * This class contains the tests for the lang function.
@@ -22,7 +24,7 @@ namespace Lunr\Libraries\L10n;
  * @package    L10n
  * @subpackage Tests
  * @author     Heinz Wiesinger <heinz@m2mobi.com>
- * @covers     Lunr\Libraries\L10n\PHPL10nProvider
+ * @covers     Lunr\L10n\PHPL10nProvider
  */
 class PHPL10nProviderLangTest extends PHPL10nProviderTest
 {
@@ -38,8 +40,8 @@ class PHPL10nProviderLangTest extends PHPL10nProviderTest
     /**
      * Test lang() without context.
      *
-     * @depends Lunr\Libraries\L10n\PHPL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @depends Lunr\L10n\Tests\PHPL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\PHPL10nProvider::lang
      */
     public function testLangWithoutContext()
     {
@@ -49,7 +51,7 @@ class PHPL10nProviderLangTest extends PHPL10nProviderTest
     /**
      * Test lang() without context returns identifier for untranslated string.
      *
-     * @covers Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @covers Lunr\L10n\PHPL10nProvider::lang
      */
     public function testLangUntranslatedWithoutContextReturnsIdentifier()
     {
@@ -59,8 +61,8 @@ class PHPL10nProviderLangTest extends PHPL10nProviderTest
     /**
      * Test lang() with context.
      *
-     * @depends Lunr\Libraries\L10n\PHPL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @depends Lunr\L10n\Tests\PHPL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\PHPL10nProvider::lang
      */
     public function testLangWithContext()
     {
@@ -70,7 +72,7 @@ class PHPL10nProviderLangTest extends PHPL10nProviderTest
     /**
      * Test lang() with context returns identifier for untranslated string.
      *
-     * @covers Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @covers Lunr\L10n\PHPL10nProvider::lang
      */
     public function testLangUntranslatedWithContextReturnsIdentifier()
     {
@@ -80,8 +82,8 @@ class PHPL10nProviderLangTest extends PHPL10nProviderTest
     /**
      * Test lang() with superfluous context.
      *
-     * @depends Lunr\Libraries\L10n\PHPL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @depends Lunr\L10n\Tests\PHPL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\PHPL10nProvider::lang
      */
     public function testLangWithSuperfluousContextReturnsIdentifier()
     {
@@ -91,8 +93,8 @@ class PHPL10nProviderLangTest extends PHPL10nProviderTest
     /**
      * Test lang() with context missing.
      *
-     * @depends Lunr\Libraries\L10n\PHPL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @depends Lunr\L10n\Tests\PHPL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\PHPL10nProvider::lang
      */
     public function testLangWithContextMissingReturnsIdentifier()
     {
@@ -102,8 +104,8 @@ class PHPL10nProviderLangTest extends PHPL10nProviderTest
     /**
      * Test lang() accessing a plural value with singular.
      *
-     * @depends Lunr\Libraries\L10n\PHPL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @depends Lunr\L10n\Tests\PHPL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\PHPL10nProvider::lang
      */
     public function testLangAccessingPluralWithSingularTranslatesSingular()
     {
@@ -113,8 +115,8 @@ class PHPL10nProviderLangTest extends PHPL10nProviderTest
     /**
      * Test lang() accessing a plural value with plural.
      *
-     * @depends Lunr\Libraries\L10n\PHPL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @depends Lunr\L10n\Tests\PHPL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\PHPL10nProvider::lang
      */
     public function testLangAccessingPluralWithPluralReturnsIdentifier()
     {
@@ -124,8 +126,8 @@ class PHPL10nProviderLangTest extends PHPL10nProviderTest
     /**
      * Test lang() accessing a plural value with singular.
      *
-     * @depends Lunr\Libraries\L10n\PHPL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @depends Lunr\L10n\Tests\PHPL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\PHPL10nProvider::lang
      */
     public function testLangAccessingPluralWithSingularAndContextTranslatesSingular()
     {
@@ -135,8 +137,8 @@ class PHPL10nProviderLangTest extends PHPL10nProviderTest
     /**
      * Test lang() accessing a plural value with plural.
      *
-     * @depends Lunr\Libraries\L10n\PHPL10nProviderBaseTest::testInit
-     * @covers  Lunr\Libraries\L10n\PHPL10nProvider::lang
+     * @depends Lunr\L10n\Tests\PHPL10nProviderBaseTest::testInit
+     * @covers  Lunr\L10n\PHPL10nProvider::lang
      */
     public function testLangAccessingPluralWithPluralAndContextReturnsIdentifier()
     {
