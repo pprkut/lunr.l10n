@@ -11,7 +11,7 @@
         <testsuite name="Lunr Testsuite">
             <file>tests/system/EnvironmentTest.php</file>
             <file>src/Lunr/L10n/Tests/L10nTest.php</file>
-            <file>src/Lunr/L10n/Tests/L10nProviderTest.php</file>
+            <file>src/Lunr/L10n/Tests/L10nProviderBaseTest.php</file>
             <file>src/Lunr/L10n/Tests/GettextL10nProviderBaseTest.php</file>
             <file>src/Lunr/L10n/Tests/GettextL10nProviderLangTest.php</file>
             <file>src/Lunr/L10n/Tests/GettextL10nProviderNlangTest.php</file>
