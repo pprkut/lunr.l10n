@@ -10,6 +10,7 @@
     <testsuites>
         <testsuite name="Lunr Testsuite">
             <file>tests/system/EnvironmentTest.php</file>
+            <file>src/Lunr/L10n/Tests/L10nViewBaseTest.php</file>
             <file>src/Lunr/L10n/Tests/L10nTest.php</file>
             <file>src/Lunr/L10n/Tests/L10nProviderBaseTest.php</file>
             <file>src/Lunr/L10n/Tests/GettextL10nProviderBaseTest.php</file>
