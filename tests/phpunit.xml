@@ -9,21 +9,21 @@
             colors="true"
             verbose="true">
     <php>
-        <ini name="zend.enable_gc" value="0" />
+        <ini name="zend.enable_gc" value="1" />
     </php>
     <testsuites>
         <testsuite name="L10n">
-            <file>tests/system/EnvironmentTest.php</file>
-            <file>src/Lunr/L10n/Tests/L10nHTMLViewBaseTest.php</file>
-            <file>src/Lunr/L10n/Tests/L10nTraitBaseTest.php</file>
-            <file>src/Lunr/L10n/Tests/L10nBaseTest.php</file>
-            <file>src/Lunr/L10n/Tests/L10nProviderBaseTest.php</file>
-            <file>src/Lunr/L10n/Tests/GettextL10nProviderBaseTest.php</file>
-            <file>src/Lunr/L10n/Tests/GettextL10nProviderLangTest.php</file>
-            <file>src/Lunr/L10n/Tests/GettextL10nProviderNlangTest.php</file>
-            <file>src/Lunr/L10n/Tests/PHPL10nProviderBaseTest.php</file>
-            <file>src/Lunr/L10n/Tests/PHPL10nProviderLangTest.php</file>
-            <file>src/Lunr/L10n/Tests/PHPL10nProviderNlangTest.php</file>
+            <file>../tests/system/EnvironmentTest.php</file>
+            <file>../src/Lunr/L10n/Tests/L10nHTMLViewBaseTest.php</file>
+            <file>../src/Lunr/L10n/Tests/L10nTraitBaseTest.php</file>
+            <file>../src/Lunr/L10n/Tests/L10nBaseTest.php</file>
+            <file>../src/Lunr/L10n/Tests/L10nProviderBaseTest.php</file>
+            <file>../src/Lunr/L10n/Tests/GettextL10nProviderBaseTest.php</file>
+            <file>../src/Lunr/L10n/Tests/GettextL10nProviderLangTest.php</file>
+            <file>../src/Lunr/L10n/Tests/GettextL10nProviderNlangTest.php</file>
+            <file>../src/Lunr/L10n/Tests/PHPL10nProviderBaseTest.php</file>
+            <file>../src/Lunr/L10n/Tests/PHPL10nProviderLangTest.php</file>
+            <file>../src/Lunr/L10n/Tests/PHPL10nProviderNlangTest.php</file>
         </testsuite>
     </testsuites>
     <filter>
