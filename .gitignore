@@ -8,3 +8,6 @@ build
 
 # ignore compiled gettext language files
 *.mo
+
+# ignore external libraries
+vendor
