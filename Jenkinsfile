@@ -7,6 +7,13 @@ def deploy(){
         sh "salt-connect library project=lunr branch=master env=m2mobi"
     }
 }
+def dependencies(String dependency_tool){
+  try {
+      sh "${dependency_tool}  install"
+  } catch(error){
+      echo "WARNING: Couldn't setup dependencies!"
+  }
+}
 pipeline {
     agent {
         label "web"
@@ -33,6 +40,7 @@ pipeline {
             steps{
                 ant_sh('clean')
                 ant_sh('setup')
+                dependencies(env.dependency_tool)
                 ant_sh('pdepend')
                 ant_sh('l10n')
             }
