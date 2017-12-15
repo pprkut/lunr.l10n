@@ -9,5 +9,6 @@ build
 # ignore compiled gettext language files
 *.mo
 
-# ignore external libraries
+# ignore generated files
 vendor
+decomposer.autoload.inc.php
