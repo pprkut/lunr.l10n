@@ -8,8 +8,8 @@
     "ext-gettext": "Needed for internationalization support in L10n"
   },
   "require-dev": {
-    "phpunit/phpunit": "~8.0",
-    "ext-xdebug": "~2.6"
+    "phpunit/phpunit": ">=7.0",
+    "ext-xdebug": "~2.6||~3.0"
   },
   "config": {
     "optimize-autoloader": true
