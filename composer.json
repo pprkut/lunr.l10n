@@ -2,7 +2,7 @@
   "require": {
     "psr/log": "~1.1.0",
     "php": ">=7.4",
-    "lunr/halo": "~0.7.0"
+    "lunr/halo": "dev-master"
   },
   "suggest": {
     "ext-gettext": "Needed for internationalization support in L10n"
