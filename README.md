@@ -1,13 +1,13 @@
-# Lunr
+# Lunr.L10n
 
-Lunr is a set of reusable **PHP components**. Lunr is mostly used by [Move][1] applications. Its features
-are slightly geared towards JSON based APIs with push notification support.
+Lunr.L10n is a set of localization support libraries. It includes translation support libraries supporting gettext or
+translations stored in php arrays, as well as generic localization helpers.
 
 Installation
 ------------
 
-* Install Lunr with Composer or with your own installer.
-* Lunr follows the [semantic versioning][2] standards.
+* Install Lunr.L10n with Composer or with your own installer.
+* Lunr.L10n follows the [semantic versioning][2] standards.
 
 Community
 ---------
@@ -18,20 +18,20 @@ Community
 Contributing
 ------------
 
-Lunr is an Open Source, community-driven project. Join by contributing code or documentation.
+Lunr.L10n is an Open Source, community-driven project. Join by contributing code or documentation.
 To do that, make your changes and upload them to our reviewboard at [reviews.lunr.nl][6]
 
-If you encounter any issues when using Lunr you can report them [on github][7]
+If you encounter any issues when using Lunr.L10n you can report them [on github][7]
 
 About Us
 --------
 
-Lunr development is spearheaded by [Move][1].
+Lunr.L10n development is spearheaded by [Move][1].
 
   [1]: https://moveagency.com
   [2]: https://semver.org
   [3]: https://groups.google.com/forum/#!forum/lunr-users
   [4]: https://groups.google.com/forum/#!forum/lunr-developers
-  [5]: https://github.com/lunr-php/lunr
+  [5]: https://github.com/lunr-php/lunr.l10n
   [6]: https://reviews.lunr.nl
-  [7]: https://github.com/lunr-php/lunr/issues
+  [7]: https://github.com/lunr-php/lunr.l10n/issues

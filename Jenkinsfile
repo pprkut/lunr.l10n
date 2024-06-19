@@ -128,7 +128,7 @@ pipeline {
                 withSonarQubeEnv('M2mobi') {
                     sh """sonar-scanner \\
                             -Dsonar.projectKey=${ACCOUNT_KEY}:backend:${PROJECT_SLUG} \\
-                            -Dsonar.projectName=Lunr \\
+                            -Dsonar.projectName=Lunr.L10n \\
                             -Dsonar.sources=src/ \\
                             -Dsonar.php.tests.reportPath=build/logs/junit.xml \\
                             -Dsonar.php.coverage.reportPaths=build/logs/clover.xml"""
