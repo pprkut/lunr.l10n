@@ -1,20 +1,27 @@
 {
-  "require": {
-    "psr/log": ">=1.1",
-    "php": ">=8.1"
-  },
-  "suggest": {
-    "ext-gettext": "Needed for internationalization support in L10n"
-  },
-  "require-dev": {
-    "lunr/halo": "dev-master",
-    "phpunit/phpunit": ">=9.0 <9.6",
-    "ext-xdebug": "~3.1"
-  },
-  "config": {
-    "optimize-autoloader": true
-  },
-  "autoload": {
-    "psr-4": {"Lunr\\": "src/Lunr/"}
-  }
+    "name": "lunr/l10n",
+    "description": "Localization support libraries",
+    "keywords": ["localization", "localisation", "gettext", "intl", "i18n", "internationalization", "internationalisation"],
+    "homepage": "https://github.com/lunr-php/lunr.l10n",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "psr/log": ">=1.1",
+        "php": ">=8.1"
+    },
+    "suggest": {
+        "ext-gettext": "Needed to support gettext-based translations",
+        "ext-intl": "Needed to support converting ISO 639-1 language codes to POSIX locales"
+    },
+    "require-dev": {
+        "lunr/halo": "dev-master",
+        "phpunit/phpunit": ">=9.0 <9.6",
+        "ext-xdebug": "~3.1"
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {"Lunr\\": "src/Lunr/"}
+    }
 }
