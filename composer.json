@@ -14,7 +14,7 @@
         "ext-intl": "Needed to support converting ISO 639-1 language codes to POSIX locales"
     },
     "require-dev": {
-        "lunr/halo": "~0.10.0",
+        "lunr/halo": "dev-master",
         "phpunit/phpunit": ">=9.0 <9.6",
         "ext-xdebug": "~3.1"
     },
