@@ -15,7 +15,7 @@ namespace Lunr\L10n\Tests;
  *
  * @covers Lunr\L10n\GettextL10nProvider
  */
-class GettextL10nProviderLangTest extends GettextL10nProviderTest
+class GettextL10nProviderLangTest extends GettextL10nProviderTestCase
 {
 
     /**

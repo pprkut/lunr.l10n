@@ -17,7 +17,7 @@ use Lunr\Halo\PropertyTraits\PsrLoggerTestTrait;
  *
  * @covers Lunr\L10n\L10n
  */
-class L10nBaseTest extends L10nTest
+class L10nBaseTest extends L10nTestCase
 {
 
     use PsrLoggerTestTrait;
@@ -83,7 +83,7 @@ class L10nBaseTest extends L10nTest
      */
     public function testCachedGetSupportedLanguages(): void
     {
-        $this->set_reflection_property_value('languages', [ 'de_DE', 'en_US', 'nl_NL' ]);
+        $this->setReflectionPropertyValue('languages', [ 'de_DE', 'en_US', 'nl_NL' ]);
 
         $languages = $this->class->get_supported_languages();
         sort($languages);

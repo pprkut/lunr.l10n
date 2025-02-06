@@ -15,7 +15,7 @@ namespace Lunr\L10n\Tests;
  *
  * @covers Lunr\L10n\GettextL10nProvider
  */
-class GettextL10nProviderBaseTest extends GettextL10nProviderTest
+class GettextL10nProviderBaseTest extends GettextL10nProviderTestCase
 {
 
     /**
@@ -26,7 +26,7 @@ class GettextL10nProviderBaseTest extends GettextL10nProviderTest
      */
     public function testInit(): void
     {
-        $method = $this->get_accessible_reflection_method('init');
+        $method = $this->getReflectionMethod('init');
 
         $method->invokeArgs($this->class, [ self::LANGUAGE ]);
 

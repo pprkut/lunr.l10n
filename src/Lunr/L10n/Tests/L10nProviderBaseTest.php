@@ -17,7 +17,7 @@ use Lunr\Halo\PropertyTraits\PsrLoggerTestTrait;
  *
  * @covers Lunr\L10n\L10nProvider
  */
-class L10nProviderBaseTest extends L10nProviderTest
+class L10nProviderBaseTest extends L10nProviderTestCase
 {
 
     use PsrLoggerTestTrait;

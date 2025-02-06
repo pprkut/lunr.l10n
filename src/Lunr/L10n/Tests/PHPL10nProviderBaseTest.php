@@ -16,7 +16,7 @@ namespace Lunr\L10n\Tests;
  *
  * @covers Lunr\L10n\PHPL10nProvider
  */
-class PHPL10nProviderBaseTest extends PHPL10nProviderTest
+class PHPL10nProviderBaseTest extends PHPL10nProviderTestCase
 {
 
     /**
@@ -24,7 +24,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
      */
     public function testLangArrayIsEmptyByDefault(): void
     {
-        $this->assertArrayEmpty($this->get_reflection_property_value('lang_array'));
+        $this->assertArrayEmpty($this->getReflectionPropertyValue('lang_array'));
     }
 
     /**
@@ -32,7 +32,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
      */
     public function testInitializedIsFalseByDefault(): void
     {
-        $this->assertFalse($this->get_reflection_property_value('initialized'));
+        $this->assertFalse($this->getReflectionPropertyValue('initialized'));
     }
 
     /**
@@ -43,11 +43,11 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
      */
     public function testInitSetsInitializedTrue(): void
     {
-        $method = $this->get_accessible_reflection_method('init');
+        $method = $this->getReflectionMethod('init');
 
         $method->invokeArgs($this->class, [ self::LANGUAGE ]);
 
-        $this->assertTrue($this->get_reflection_property_value('initialized'));
+        $this->assertTrue($this->getReflectionPropertyValue('initialized'));
     }
 
     /**
@@ -58,11 +58,11 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
      */
     public function testInitForNonDefaultLanguageSetsLangArray(): void
     {
-        $method = $this->get_accessible_reflection_method('init');
+        $method = $this->getReflectionMethod('init');
 
         $method->invokeArgs($this->class, [ self::LANGUAGE ]);
 
-        $property = $this->get_reflection_property_value('lang_array');
+        $property = $this->getReflectionPropertyValue('lang_array');
 
         $this->assertIsArray($property);
         $this->assertNotEmpty($property);
@@ -76,11 +76,11 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
      */
     public function testInitForDefaultLanguageDoesNotSetLangArray(): void
     {
-        $method = $this->get_accessible_reflection_method('init');
+        $method = $this->getReflectionMethod('init');
 
         $method->invokeArgs($this->class, [ 'en_US' ]);
 
-        $this->assertArrayEmpty($this->get_reflection_property_value('lang_array'));
+        $this->assertArrayEmpty($this->getReflectionPropertyValue('lang_array'));
     }
 
     /**
@@ -91,9 +91,9 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
      */
     public function testInitForDefaultLanguageDoesNotRepopulate(): void
     {
-        $property = $this->get_accessible_reflection_property('lang_array');
+        $property = $this->getReflectionProperty('lang_array');
 
-        $method = $this->get_accessible_reflection_method('init');
+        $method = $this->getReflectionMethod('init');
 
         $method->invokeArgs($this->class, [ self::LANGUAGE ]);
 
@@ -115,7 +115,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
      */
     public function testLangWithoutContextReturnsIdentifierWhenLanguageIsDefault(): void
     {
-        $this->set_reflection_property_value('language', 'en_US');
+        $this->setReflectionPropertyValue('language', 'en_US');
 
         $this->assertEquals('table', $this->class->lang('table'));
     }
@@ -127,7 +127,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
      */
     public function testLangWithContextReturnsIdentifierWhenLanguageIsDefault(): void
     {
-        $this->set_reflection_property_value('language', 'en_US');
+        $this->setReflectionPropertyValue('language', 'en_US');
 
         $this->assertEquals('table', $this->class->lang('table', 'kitchen'));
     }
@@ -139,7 +139,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
      */
     public function testNlangSingularWithoutContextReturnsSingularWhenLanguageIsDefault(): void
     {
-        $this->set_reflection_property_value('language', 'en_US');
+        $this->setReflectionPropertyValue('language', 'en_US');
 
         $this->assertEquals('%d man', $this->class->nlang('%d man', '%d men', 1));
     }
@@ -151,7 +151,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
      */
     public function testNlangPluralWithoutContextReturnsPluralWhenLanguageIsDefault(): void
     {
-        $this->set_reflection_property_value('language', 'en_US');
+        $this->setReflectionPropertyValue('language', 'en_US');
 
         $this->assertEquals('%d men', $this->class->nlang('%d man', '%d men', 2));
     }
@@ -163,7 +163,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
      */
     public function testNlangSingularWithContextReturnsSingularWhenLanguageIsDefault(): void
     {
-        $this->set_reflection_property_value('language', 'en_US');
+        $this->setReflectionPropertyValue('language', 'en_US');
 
         $this->assertEquals('%d man', $this->class->nlang('%d man', '%d men', 1, 'people'));
     }
@@ -175,7 +175,7 @@ class PHPL10nProviderBaseTest extends PHPL10nProviderTest
      */
     public function testNlangPluralWithContextReturnsPluralWhenLanguageIsDefault(): void
     {
-        $this->set_reflection_property_value('language', 'en_US');
+        $this->setReflectionPropertyValue('language', 'en_US');
 
         $this->assertEquals('%d men', $this->class->nlang('%d man', '%d men', 2, 'people'));
     }

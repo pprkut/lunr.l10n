@@ -10,7 +10,7 @@
 
 namespace Lunr\L10n\Tests;
 
-use Lunr\Halo\LunrBaseTest;
+use Lunr\Halo\LunrBaseTestCase;
 use Lunr\L10n\L10nProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\MockObject\Stub;
@@ -21,7 +21,7 @@ use Psr\Log\LoggerInterface;
  *
  * @covers Lunr\L10n\L10nProvider
  */
-abstract class L10nProviderTest extends LunrBaseTest
+abstract class L10nProviderTestCase extends LunrBaseTestCase
 {
 
     /**

@@ -15,7 +15,7 @@ namespace Lunr\L10n\Tests;
  *
  * @covers Lunr\L10n\PHPL10nProvider
  */
-class PHPL10nProviderLangTest extends PHPL10nProviderTest
+class PHPL10nProviderLangTest extends PHPL10nProviderTestCase
 {
 
     /**

@@ -10,7 +10,7 @@
 
 namespace Lunr\L10n\Tests;
 
-use Lunr\Halo\LunrBaseTest;
+use Lunr\Halo\LunrBaseTestCase;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -18,7 +18,7 @@ use Psr\Log\LoggerInterface;
  *
  * @covers Lunr\L10n\AbstractL10n
  */
-abstract class AbstractL10nTest extends LunrBaseTest
+abstract class AbstractL10nTestCase extends LunrBaseTestCase
 {
 
     /**
@@ -52,7 +52,7 @@ abstract class AbstractL10nTest extends LunrBaseTest
 
         parent::baseSetUp($this->class);
 
-        $this->set_reflection_property_value('logger', $this->logger);
+        $this->setReflectionPropertyValue('logger', $this->logger);
     }
 
     /**

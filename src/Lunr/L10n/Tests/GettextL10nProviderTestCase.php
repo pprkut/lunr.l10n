@@ -10,7 +10,7 @@
 
 namespace Lunr\L10n\Tests;
 
-use Lunr\Halo\LunrBaseTest;
+use Lunr\Halo\LunrBaseTestCase;
 use Lunr\L10n\GettextL10nProvider;
 use Psr\Log\LoggerInterface;
 
@@ -20,7 +20,7 @@ use Psr\Log\LoggerInterface;
  *
  * @covers Lunr\L10n\GettextL10nProvider
  */
-abstract class GettextL10nProviderTest extends LunrBaseTest
+abstract class GettextL10nProviderTestCase extends LunrBaseTestCase
 {
 
     /**

@@ -18,7 +18,7 @@ use Throwable;
  *
  * @covers Lunr\L10n\AbstractL10n
  */
-class AbstractL10nBaseTest extends AbstractL10nTest
+class AbstractL10nBaseTest extends AbstractL10nTestCase
 {
 
     use PsrLoggerTestTrait;
@@ -64,7 +64,7 @@ class AbstractL10nBaseTest extends AbstractL10nTest
 
         $this->class->set_default_language('Whatever');
 
-        $this->assertEquals('en_US', $this->get_reflection_property_value('default_language'));
+        $this->assertEquals('en_US', $this->getReflectionPropertyValue('default_language'));
     }
 
     /**
@@ -131,7 +131,7 @@ class AbstractL10nBaseTest extends AbstractL10nTest
         }
         catch (Throwable $e)
         {
-            $this->assertEquals(TEST_STATICS . '/l10n/', $this->get_reflection_property_value('locales_location'));
+            $this->assertEquals(TEST_STATICS . '/l10n/', $this->getReflectionPropertyValue('locales_location'));
 
             throw $e;
         }

@@ -10,7 +10,7 @@
 
 namespace Lunr\L10n\Tests;
 
-use Lunr\Halo\LunrBaseTest;
+use Lunr\Halo\LunrBaseTestCase;
 use Lunr\L10n\L10n;
 
 /**
@@ -18,7 +18,7 @@ use Lunr\L10n\L10n;
  *
  * @covers Lunr\L10n\L10n
  */
-abstract class L10nTest extends LunrBaseTest
+abstract class L10nTestCase extends LunrBaseTestCase
 {
 
     /**
